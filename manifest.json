@@ -8,8 +8,7 @@
     "downloads",
     "activeTab",
     "scripting",
-    "webRequest",
-    "webRequestBlocking"
+    "webRequest"
   ],
   "host_permissions": [
     "<all_urls>"
