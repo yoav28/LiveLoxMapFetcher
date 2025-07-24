@@ -4,10 +4,13 @@
   "description": "A simple Chrome extension to download any map from Livelox.",
   "version": "1.0.0",
   "permissions": [
-    "downloads"
+    "storage",
+    "downloads",
+    "webRequest"
   ],
   "host_permissions": [
-    "*://*.livelox.com/*"
+    "https://www.livelox.com/Viewer/*",
+    "https://livelox.blob.core.windows.net/*"
   ],
   "action": {
     "default_popup": "public/index.html",
@@ -21,5 +24,8 @@
     "16": "public/assets/icon16.png",
     "48": "public/assets/icon48.png",
     "128": "public/assets/icon128.png"
+  },
+  "background": {
+    "service_worker": "src/index.js"
   }
 }
