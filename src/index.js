@@ -42,4 +42,5 @@ const fetchImage = async (url) => {
     await page.goto(url);
 }
 
-fetchImage('https://www.livelox.com/Viewer/Porvoo-Jukola-2023-Jukolan-viesti/Jukolan-viesti/6?classId=622294&relayLeg=6&tab=player');
+// fetchImage('https://www.livelox.com/Viewer/Stockholm-City-Cup-2017-E1/H17-?classId=75219&tab=player');
+fetchImage('https://www.livelox.com/Viewer/National-Championship-12-18-Masters-sprint-distance/-21-?classId=673903&tab=player');

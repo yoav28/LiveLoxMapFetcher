@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Livelox Map Downloader",
+  "description": "A simple Chrome extension to download any map from Livelox.",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "downloads",
+    "activeTab",
+    "scripting",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "public/index.html",
+    "default_icon": {
+      "16": "public/assets/icon16.png",
+      "48": "public/assets/icon48.png",
+      "128": "public/assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "public/assets/icon16.png",
+    "48": "public/assets/icon48.png",
+    "128": "public/assets/icon128.png"
+  },
+  "background": {
+    "service_worker": "src/index.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.livelox.com/*"],
+      "js": ["src/content.js"]
+    }
+  ]
+}
